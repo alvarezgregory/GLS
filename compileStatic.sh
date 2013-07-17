@@ -2,9 +2,9 @@
 
 # local variable
 CURRENT=$(pwd)
-LIBGPG=$CURRENT"/dep/libgpg-error-1.10"
-LIBGCRYPT=$CURRENT"/dep/libgcrypt-1.5.0"
-LIBTASN=$CURRENT"/dep/libtasn1-2.11"
+LIBGPG=$CURRENT"/dep/libgpg-error-1.12"
+LIBGCRYPT=$CURRENT"/dep/libgcrypt-1.5.2"
+LIBTASN=$CURRENT"/dep/libtasn1-3.3"
 
 # check
 rm -r tmp || true
@@ -29,7 +29,7 @@ echo "*************************************"
 echo " "
 echo " "
 echo "#################################"
-echo "# Compilation Libgpg-error 1.10 #"
+echo "# Compilation Libgpg-error 1.12 #"
 echo "#################################"
 cd $LIBGPG
 ./configure --enable-static=yes --enable-shared=no
@@ -42,7 +42,7 @@ ln -s src bin
 # Compile libgcrypt
 echo " "
 echo "###############################"
-echo "# Compilation Libgcrypt 1.5.0 #"
+echo "# Compilation Libgcrypt 1.5.2 #"
 echo "###############################"
 cd $LIBGCRYPT
 ln -s $LIBGPG/src/gpg-error.h ./src/gpg-error.h
@@ -55,9 +55,9 @@ cp *.o $CURRENT/tmp/
 
 # Compile libtasn1
 echo " "
-echo "#############################"
-echo "# Compilation Libtasn1 2.11 #"
-echo "#############################"
+echo "############################"
+echo "# Compilation Libtasn1 3.3 #"
+echo "############################"
 cd $LIBTASN
 ./configure --enable-static=yes --enable-shared=no
 make

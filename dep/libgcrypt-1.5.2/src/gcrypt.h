@@ -28,7 +28,7 @@
 #include <stdarg.h>
 #include <string.h>
 
-#include <gpg-error.h>
+#include "gpg-error.h"
 
 #include <sys/types.h>
 
@@ -1909,7 +1909,7 @@ int gcry_is_secure (const void *a) _GCRY_GCC_ATTR_PURE;
 
 
 /* Include support for Libgcrypt modules.  */
-#include <gcrypt-module.h>
+#include "gcrypt-module.h"
 
 #if 0 /* (Keep Emacsens' auto-indent happy.) */
 {
