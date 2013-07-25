@@ -121,7 +121,7 @@ class GLSServer:
 	laddServerCert.argtypes = [c_void_p, c_char_p, c_char_p]
 	co_public = c_char_p(public)
 	co_private = c_char_p(private)
-	vre = laddServerCert(self.mySocket, co_public, co_private)
+	vre = laddServerCert(self.myServerSocket, co_public, co_private)
 	if int(vre) != 0:
 	    raise GlsError(int(vre), "Error addServerCertificate")
 
@@ -132,7 +132,7 @@ class GLSServer:
 	laddServerCertFile.argtypes = [c_void_p, c_char_p, c_char_p]
 	co_public = c_char_p(public)
 	co_private = c_char_p(private)
-	vre = laddServerCertFile(self.mySocket, co_public, co_private)
+	vre = laddServerCertFile(self.myServerSocket, co_public, co_private)
 	if int(vre) != 0:
 	    raise GlsError(int(vre), "Error addServerCertificateFromFile")
 
