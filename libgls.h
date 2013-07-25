@@ -159,7 +159,9 @@ typedef unsigned char byte;
 #define GLS_ERROR_REGISTERREFUSED -163
 #define GLS_ERROR_BADSIZE -164
 
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 /*
  * Structure of the GLS socket
@@ -432,5 +434,8 @@ int waitForClient(GLSServerSock* myGLSServerSock, GLSSock** myClient);
 int addServerCertificate(GLSServerSock* myGLSServerSock, const char* publicCert, const char* privateKey);
 int addServerCertificateFromFile(GLSServerSock* myGLSServerSock, const char* publicCertFile, const char* privateKeyFile);
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif
