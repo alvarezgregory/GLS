@@ -1,0 +1,8 @@
+language: c
+script: 
+  - ./compileStatic.sh
+  - ./compileDynamic.sh
+branches:
+  only:
+    - master
+compiler: gcc
