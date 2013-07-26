@@ -5,6 +5,8 @@ This is the first public release of the GLS library, it is open source under the
 
 GLS, acronym for Goswell Layer Security, is a secure communication protocol developed by the Goswell company to respond to the actual secure connexion protocol’s problems by removing key exchange. See full documentation for more information.
 
+[![Build Status](https://travis-ci.org/goswell/GLS.png?branch=master)](https://travis-ci.org/goswell/GLS)
+
 How to use it :
 ---
 
