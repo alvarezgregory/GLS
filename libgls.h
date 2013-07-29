@@ -160,6 +160,7 @@ typedef unsigned char byte;
 #define GLS_ERROR_BADSIZE -164
 
 #ifdef __cplusplus
+namespace libgls {
 extern "C" {
 #endif
 
@@ -435,6 +436,7 @@ int addServerCertificate(GLSServerSock* myGLSServerSock, const char* publicCert,
 int addServerCertificateFromFile(GLSServerSock* myGLSServerSock, const char* publicCertFile, const char* privateKeyFile);
 
 #ifdef __cplusplus
+}
 }
 #endif
 
