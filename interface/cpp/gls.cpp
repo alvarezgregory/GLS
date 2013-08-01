@@ -1,3 +1,6 @@
+#ifndef GLSCPP_H
+#define GLSCPP_H
+
 #include <iostream>
 #include <exception>
 #include "libgls.h"
@@ -284,3 +287,4 @@ void glsServer::addServerCertificateFromFile(const char* publicCertFile, const c
 	else return;
 
 }
+#endif
